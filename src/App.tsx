@@ -141,9 +141,8 @@ const Footer = ({ setCurrentPage }: { setCurrentPage: (p: string) => void }) => 
             
             <div className="flex flex-col space-y-6">
               <span className="text-white/30">Social</span>
-              <a href="#" className="hover:text-primary transition-colors flex items-center gap-2">LinkedIn <ExternalLink size={14} /></a>
-              <a href="#" className="hover:text-primary transition-colors flex items-center gap-2">Instagram <ExternalLink size={14} /></a>
-              <a href="#" className="hover:text-primary transition-colors flex items-center gap-2">Vimeo <ExternalLink size={14} /></a>
+              <a href="https://www.linkedin.com/company/solisis-agency/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">LinkedIn <ExternalLink size={14} /></a>
+              <a href="https://www.instagram.com/solisis.agency/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">Instagram <ExternalLink size={14} /></a>
             </div>
 
             <div className="hidden md:flex flex-col space-y-6">
@@ -168,10 +167,9 @@ const Footer = ({ setCurrentPage }: { setCurrentPage: (p: string) => void }) => 
 
 // --- Page Components ---
 
-const HomePage = ({ setCurrentPage, key }: { setCurrentPage: (p: string) => void, key?: string }) => {
+const HomePage = ({ setCurrentPage }: { setCurrentPage: (p: string) => void, key?: string }) => {
   return (
     <motion.div
-      key={key}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -233,7 +231,7 @@ const HomePage = ({ setCurrentPage, key }: { setCurrentPage: (p: string) => void
               transition={{ delay: 1, duration: 0.6 }}
               className="absolute -bottom-10 -left-10 bg-primary p-10 rounded-2xl shadow-2xl max-w-[260px] text-white"
             >
-              <p className="text-5xl font-black italic mb-2 tracking-tighter">100+</p>
+              <p className="text-5xl font-black italic mb-2 tracking-tighter">10+</p>
               <p className="text-white/80 font-medium leading-snug">Projets livrés avec une excellence narrative.</p>
             </motion.div>
           </motion.div>
@@ -406,7 +404,7 @@ const HomePage = ({ setCurrentPage, key }: { setCurrentPage: (p: string) => void
   );
 };
 
-const ServicesPage = ({ setCurrentPage, key }: { setCurrentPage: (p: string) => void, key?: string }) => {
+const ServicesPage = ({ setCurrentPage }: { setCurrentPage: (p: string) => void, key?: string }) => {
   const services = [
     {
       id: 'audit',
@@ -556,8 +554,8 @@ const ContactPage = () => {
                 <div>
                   <p className="text-sm font-bold text-tertiary/30 uppercase tracking-widest mb-2">Suivez-nous</p>
                   <div className="flex gap-4 font-bold">
-                    <a href="#" className="hover:text-primary transition-colors">LinkedIn</a>
-                    <a href="#" className="hover:text-primary transition-colors">Instagram</a>
+                    <a href="https://www.linkedin.com/company/solisis-agency/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a>
+                    <a href="https://www.instagram.com/solisis.agency/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
                   </div>
                 </div>
               </div>
@@ -576,11 +574,18 @@ const ContactPage = () => {
           <div className="relative">
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-[150px] -z-10" />
             <div className="bg-white p-8 md:p-16 rounded-[3rem] shadow-[0_50px_100px_-20px_rgba(30,45,47,0.1)] border border-black/5">
-              <form className="space-y-10" onSubmit={(e) => e.preventDefault()}>
+              <form 
+                className="space-y-10" 
+                action="mailto:contact@solisisagency.com" 
+                method="POST" 
+                encType="text/plain"
+              >
                 <div className="space-y-4">
                   <label className="text-sm font-bold text-tertiary tracking-widest uppercase">Nom complet</label>
                   <input 
                     type="text" 
+                    name="Name"
+                    required
                     placeholder="Jean Dupont"
                     className="w-full bg-zinc-50 border-none rounded-2xl px-8 py-6 focus:ring-4 focus:ring-primary/20 text-lg transition-all"
                   />
@@ -590,6 +595,8 @@ const ContactPage = () => {
                   <label className="text-sm font-bold text-tertiary tracking-widest uppercase">Adresse email</label>
                   <input 
                     type="email" 
+                    name="Email"
+                    required
                     placeholder="jean@exemple.com"
                     className="w-full bg-zinc-50 border-none rounded-2xl px-8 py-6 focus:ring-4 focus:ring-primary/20 text-lg transition-all"
                   />
@@ -598,18 +605,23 @@ const ContactPage = () => {
                 <div className="space-y-4">
                   <label className="text-sm font-bold text-tertiary tracking-widest uppercase">Votre message</label>
                   <textarea 
+                    name="Message"
+                    required
                     rows={5}
                     placeholder="Parlez-nous de votre projet..."
                     className="w-full bg-zinc-50 border-none rounded-2xl px-8 py-6 focus:ring-4 focus:ring-primary/20 text-lg transition-all resize-none"
                   />
                 </div>
 
-                <button className="w-full bg-tertiary text-white py-6 rounded-full font-black text-xl hover:bg-primary transition-all active:scale-[0.98] flex justify-center items-center gap-4 group">
+                <button 
+                  type="submit"
+                  className="w-full bg-tertiary text-white py-6 rounded-full font-black text-xl hover:bg-primary transition-all active:scale-[0.98] flex justify-center items-center gap-4 group"
+                >
                   Envoyer le message <Send className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>
                 
                 <p className="text-center text-sm text-tertiary/40 italic font-light">
-                  En envoyant ce formulaire, vous acceptez notre politique de confidentialité.
+                  En envoyant ce formulaire, votre client mail s'ouvrira pour finaliser l'envoi vers contact@solisisagency.com
                 </p>
               </form>
             </div>

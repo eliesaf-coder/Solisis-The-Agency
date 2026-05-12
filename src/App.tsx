@@ -187,26 +187,26 @@ const HomePage = ({ setCurrentPage }: { setCurrentPage: (p: string) => void, key
             className="space-y-10"
           >
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm block">
-              L'expertise narrative
+              L'expertise digitale
             </span>
             <h1 className="text-6xl md:text-[5.5rem] font-black leading-[0.9] tracking-tighter text-tertiary">
-              De la vision à <br /><span className="text-primary">l’impact.</span>
+              Votre standing <br /><span className="text-primary">mérite d'être vu.</span>
             </h1>
             <p className="text-xl text-tertiary/60 leading-relaxed max-w-lg">
-              Solisis transforme vos ambitions en récits mémorables. Nous fusionnons stratégie audacieuse et création d'exception pour propulser votre marque.
+              De la vision à l'impact : Solisis Agency fusionne stratégie audacieuse et création d'exception pour transformer vos ambitions en succès mesurables.
             </p>
             <div className="flex flex-wrap gap-6 pt-4">
               <button 
                 onClick={() => setCurrentPage('contact')}
                 className="bg-tertiary text-white px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-tertiary/20 transition-all flex items-center gap-3 active:scale-95 transition-all"
               >
-                Demander un devis
+                Lancer mon projet
               </button>
               <button 
                 onClick={() => setCurrentPage('services')}
                 className="bg-accent text-primary px-10 py-5 rounded-xl font-bold text-lg hover:bg-accent/80 transition-all active:scale-95"
               >
-                Découvrir nos services
+                Explorer nos expertises
               </button>
             </div>
           </motion.div>
@@ -244,7 +244,7 @@ const HomePage = ({ setCurrentPage }: { setCurrentPage: (p: string) => void, key
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
             <div className="lg:col-span-5">
               <h2 className="text-4xl md:text-5xl font-black text-tertiary leading-tight tracking-tight">
-                Nous ne créons pas seulement des contenus, nous bâtissons des héritages.
+                Nous ne créons pas seulement des contenus, nous bâtissons votre autorité digitale.
               </h2>
             </div>
             <div className="lg:col-span-7 space-y-12">
@@ -278,7 +278,7 @@ const HomePage = ({ setCurrentPage }: { setCurrentPage: (p: string) => void, key
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl space-y-4">
               <span className="text-primary font-bold tracking-widest uppercase text-sm">Nos Domaines</span>
-              <h2 className="text-5xl md:text-6xl font-black text-tertiary tracking-tighter">Une expertise pluridisciplinaire.</h2>
+              <h2 className="text-5xl md:text-6xl font-black text-tertiary tracking-tighter">Expertises 360° pour marques d'exception.</h2>
             </div>
             <button 
               onClick={() => setCurrentPage('services')}
@@ -355,7 +355,7 @@ const HomePage = ({ setCurrentPage }: { setCurrentPage: (p: string) => void, key
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center space-y-24">
           <div className="space-y-6">
             <span className="text-primary font-bold tracking-widest uppercase text-sm">Pourquoi nous ?</span>
-            <h2 className="text-5xl md:text-7xl font-black text-tertiary tracking-tighter">L'excellence comme standard.</h2>
+            <h2 className="text-5xl md:text-7xl font-black text-tertiary tracking-tighter">L'excellence comme signature.</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -451,10 +451,10 @@ const ServicesPage = ({ setCurrentPage }: { setCurrentPage: (p: string) => void,
         <header className="max-w-4xl space-y-8 mb-32">
           <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm block">L'expertise Solisis</span>
           <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-tertiary leading-[0.9]">
-            Nos services
+            Expertises &<br />Solutions
           </h1>
           <p className="text-2xl text-tertiary/60 leading-relaxed font-light">
-            Nous transformons vos ambitions en récits visuels percutants. Une approche holistique où la stratégie rencontre l'art de l'image.
+            Nous transformons vos ambitions en récits visuels percutants. Une approche holistique où la stratégie de pointe rencontre l'art pur de l'image.
           </p>
         </header>
 
@@ -529,10 +529,10 @@ const ContactPage = () => {
             <div className="space-y-8">
               <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm block">Parlons de vous</span>
               <h1 className="text-6xl md:text-8xl font-black text-tertiary tracking-tighter leading-[0.9]">
-                Contactez-nous
+                Donnez vie à<br />votre vision.
               </h1>
               <p className="text-2xl text-tertiary/60 leading-relaxed font-light max-w-lg">
-                L’expertise créative au service de votre récit. Que vous ayez une idée précise ou un concept en gestation, notre équipe est prête à lui donner vie.
+                Votre projet mérite une attention d'exception. Contactez notre équipe pour définir ensemble votre prochaine étape de croissance.
               </p>
             </div>
 

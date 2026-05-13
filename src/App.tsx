@@ -20,6 +20,7 @@ import {
   Send,
   ExternalLink
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 // --- Shared Components ---
 
@@ -660,6 +661,7 @@ export default function App() {
       </main>
 
       <Footer setCurrentPage={setCurrentPage} />
+      <Analytics />
     </div>
   );
 }

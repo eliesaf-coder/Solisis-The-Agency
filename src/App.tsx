@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { 
   ArrowRight, 
   Menu, 
@@ -660,6 +661,7 @@ export default function App() {
       </main>
 
       <Footer setCurrentPage={setCurrentPage} />
+      <SpeedInsights />
     </div>
   );
 }
